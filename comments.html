@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | NexaTech Solutions</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+        <img src="images/logo.png" alt="NexaTech Solutions Logo">
+        </div>
+
+        <div class="navlinks">
+            <a href="Index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="founderteam.html">Our Team</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="comments.html">Reviews</a>
+        </div>
+    </nav>
+
+    <section class="reviewshero">
+        <h1>Customer Reviews</h1>
+
+        <p>
+            Share your experience with NexaTech Solutions and help us improve our services.
+        </p>
+    </section>
+
+    <section class="reviewformsection">
+        <form id="reviewForm" class="reviewform">
+
+            <h2>Leave A Review</h2>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <select
+                id="rating"
+                name="rating"
+                required
+            >
+                <option value="">Select Rating</option>
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+            </select>
+
+            <textarea
+                id="comment"
+                name="comment"
+                rows="6"
+                placeholder="Write your review"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Submit Review
+            </button>
+
+        </form>
+    </section>
+
+    <section class="reviewssection">
+
+        <h2>Recent Reviews</h2>
+
+        <div id="reviewsContainer" class="reviewscontainer"></div>
+
+    </section>
+
+    <footer>
+
+        <div class="footercontent">
+
+            <div class="footerleft">
+                <h3>NexaTech Solutions</h3>
+
+                <p>
+                    Innovative digital solutions for modern businesses.
+                </p>
+            </div>
+
+            <div class="footercenter">
+                <h3>Quick Links</h3>
+
+                <a href="Index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="founderteam.html">Our Team</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="comments.html">Reviews</a>
+            </div>
+
+            <div class="footerright">
+                <h3>Contact</h3>
+
+                <p>Email: info@nexatech.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Location: New York, USA</p>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 NexaTech Solutions. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
