@@ -599,6 +599,23 @@ font-size: 2.2rem;
     margin:40px auto;
 }
 
+.about-container1{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+.hero-image {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 .about-section{
     display:flex;
     align-items:center;
@@ -628,7 +645,16 @@ font-size: 2.2rem;
     width:100%;
     border-radius:15px;
 }
+.hero-image {
+    width: 100%;
+}
 
+.hero-image img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    display: block;
+}
 .mission-vision{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -667,7 +693,7 @@ font-size: 2.2rem;
     color: #0f172a;
     padding: 50px 100px;
     border-bottom: 1px solid black;
-    background-color: whitesmoke;
+    background-color: #f4f7fb;
 }
 
 .service-card{
