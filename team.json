@@ -1,0 +1,54 @@
+{
+  "leadership": [
+    {
+      "name": "Assaf Bin Amro",
+      "role": "Founder & CEO",
+      "bio": "Leading NexaTech Solutions with a vision for innovation, growth, and customer success. Assaf drives the company's strategic direction and ensures every client receives exceptional value.",
+      "expertise": ["Strategic Planning", "Business Development", "Digital Innovation"],
+      "linkedin": "#"
+    },
+    {
+      "name": "Hussein Khodr",
+      "role": "Chief Technology Officer",
+      "bio": "Driving technical excellence and overseeing the development of scalable digital solutions. Hussein leads the engineering teams to deliver robust, future-proof systems.",
+      "expertise": ["Software Architecture", "Cloud Infrastructure", "System Design"],
+      "linkedin": "#"
+    },
+    {
+      "name": "Nikita Korobeinikov",
+      "role": "Operations Manager",
+      "bio": "Ensuring projects are delivered efficiently while maintaining the highest standards. Nikita streamlines processes and keeps every project on track and on time.",
+      "expertise": ["Project Management", "Process Optimization", "Quality Assurance"],
+      "linkedin": "#"
+    },
+    {
+      "name": "Lana Alkhatib",
+      "role": "Lead Solutions Architect",
+      "bio": "Designing innovative technology solutions and ensuring projects align with client goals, scalability requirements, and industry best practices.",
+      "expertise": ["Solutions Design", "Client Strategy", "Technical Consulting"],
+      "linkedin": "#"
+    }
+  ],
+  "departments": [
+    {
+      "name": "Software Development",
+      "icon": "💻",
+      "description": "Building secure web applications, business systems, and custom software tailored to each client's unique needs."
+    },
+    {
+      "name": "Cloud Solutions",
+      "icon": "☁️",
+      "description": "Designing scalable cloud infrastructure and modern deployment solutions that grow with your business."
+    },
+    {
+      "name": "Cybersecurity",
+      "icon": "🔒",
+      "description": "Protecting businesses through proactive security audits, threat management, and risk mitigation strategies."
+    },
+    {
+      "name": "IT Support",
+      "icon": "🛠️",
+      "description": "Delivering responsive technical support and fully managed IT services so your business never skips a beat."
+    }
+  ]
+}

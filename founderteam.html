@@ -1,10 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team - NexaTech Solutions</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Hero ── */
+    .team-hero {
+      background: linear-gradient(135deg, #1e2a3a 0%, #2d3e50 60%, #1a2535 100%);
+      padding: 100px 40px 80px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(0, 188, 212, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .team-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+    }
+
+    .team-hero p {
+      font-size: 1.1rem;
+      color: #b0bec5;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── Section wrapper ── */
+    .team-section {
+      padding: 70px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #1e2a3a;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #607d8b;
+      font-size: 1rem;
+      margin-bottom: 50px;
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 4px;
+      background: #00bcd4;
+      border-radius: 2px;
+      margin: 12px auto 48px;
+    }
+
+    /* ── Values strip ── */
+    .values-strip {
+      background: #f4f6f9;
+      padding: 50px 40px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .value-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 32px 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+    }
+
+    .value-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e2a3a;
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      color: #607d8b;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    /* ── Leadership grid ── */
+    #leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .team-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 14px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.13);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-avatar {
+      background: linear-gradient(135deg, #1e2a3a, #2d3e50);
+      padding: 30px 0 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .avatar-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(0, 188, 212, 0.18);
+      border: 2.5px solid #00bcd4;
+      color: #00e5ff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 1px;
+    }
+
+    .card-body {
+      padding: 22px 20px 24px;
+    }
+
+    .member-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e2a3a;
+      margin-bottom: 4px;
+    }
+
+    .member-role {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #00acc1;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .member-bio {
+      font-size: 0.88rem;
+      color: #607d8b;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .expertise-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .expertise-tag {
+      background: #e8f5f7;
+      color: #00838f;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+
+    /* ── Departments grid ── */
+    .depts-section {
+      background: #f4f6f9;
+      padding: 70px 40px;
+    }
+
+    #departments-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dept-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 32px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .dept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    }
+
+    .dept-icon {
+      font-size: 2.2rem;
+      margin-bottom: 14px;
+    }
+
+    .dept-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1e2a3a;
+      margin-bottom: 10px;
+    }
+
+    .dept-desc {
+      font-size: 0.88rem;
+      color: #607d8b;
+      line-height: 1.65;
+    }
+
+    /* ── CTA ── */
+    .team-cta {
+      text-align: center;
+      padding: 70px 40px;
+      background: #fff;
+    }
+
+    .team-cta h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1e2a3a;
+      margin-bottom: 14px;
+    }
+
+    .team-cta p {
+      color: #607d8b;
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      #leadership-grid,
+      #departments-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .team-hero h1 { font-size: 2rem; }
+      #leadership-grid,
+      #departments-grid,
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+      .team-section,
+      .values-strip,
+      .depts-section,
+      .team-cta {
+        padding: 50px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ── Navigation (matches site) ── -->
+  <nav>
+    <h2>NexaTech Solutions</h2>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Our Services</a>
+      <a href="founderteam.html" class="active">Our Team</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="comments.html">Reviews</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <header class="team-hero">
+    <h1>Meet Our Team</h1>
+    <p>Behind every successful project is a team of passionate technology professionals committed to innovation, reliability, and client success.</p>
+  </header>
+
+  <!-- ── Who We Are ── -->
+  <section class="team-section">
+    <h2 class="section-title">Who We Are</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      NexaTech Solutions brings together developers, IT specialists, cloud experts, and cybersecurity professionals
+      who share one goal: helping businesses thrive through technology.
+    </p>
+
+    <!-- Values -->
+    <div class="values-grid" style="margin-top: 0;">
+      <div class="value-card">
+        <h3>Innovation</h3>
+        <p>We continuously explore emerging technologies to deliver modern solutions that create real business value.</p>
+      </div>
+      <div class="value-card">
+        <h3>Collaboration</h3>
+        <p>Our team works closely with clients to understand their challenges and deliver tailored, lasting results.</p>
+      </div>
+      <div class="value-card">
+        <h3>Excellence</h3>
+        <p>We focus on quality, security, and reliability in everything we build — no shortcuts, ever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Leadership Team (dynamically loaded) ── -->
+  <section class="values-strip">
+    <div style="max-width:1200px; margin:0 auto;">
+      <h2 class="section-title">Leadership Team</h2>
+      <div class="section-divider"></div>
+      <!-- Cards injected here by team.js -->
+      <div id="leadership-grid">
+        <p style="text-align:center; color:#607d8b;">Loading team...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Technology Specialists (dynamically loaded) ── -->
+  <section class="depts-section">
+    <h2 class="section-title">Technology Specialists</h2>
+    <div class="section-divider"></div>
+    <!-- Cards injected here by team.js -->
+    <div id="departments-grid">
+      <p style="text-align:center; color:#607d8b;">Loading departments...</p>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="team-cta">
+    <h2>Join Us on the Journey</h2>
+    <p>We believe technology should empower businesses, simplify processes, and create opportunities. Our team is committed to helping clients achieve their goals through innovative digital solutions.</p>
+    <a href="contact.html" class="btn">Contact Our Team</a>
+  </section>
+
+  <!-- ── Footer (matches site) ── -->
+  <footer>
+    <div class="footercontent">
+      <div class="footerleft">
+        <h3>NexaTech Solutions</h3>
+        <p>Innovative digital solutions for modern businesses.</p>
+      </div>
+      <div class="footercenter">
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="founderteam.html">Our Team</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="comments.html">Reviews</a>
+      </div>
+      <div class="footerright">
+        <h3>Contact</h3>
+        <p>Email: info@nexatech.com</p>
+        <p>Phone: +971 50 345 9398</p>
+        <p>Location: Abu Dhabi, UAE</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2026 NexaTech Solutions. All rights reserved.</p>
+  </footer>
+
+  <!-- External JS — loads team data from team.json -->
+  <script src="team.js"></script>
 
 </body>
 </html>
